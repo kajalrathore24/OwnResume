@@ -1,142 +1,66 @@
-<!DOCTYPE html>
+<!DOCTYPE htaml>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OwnResume</title>
-    <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-        }
-        :root{
-            --primary-color:black;
-            --secondary-color:aqua;
-            --third-color:white;
-        }
-        .second-color{
-            color: var(--secondary-color);
-
-        }
-        header{
-            background: url(../images/pic1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before{
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background: var(--primary-color);
-            opacity: .5;
-
-        }
-        header::after{
-            content: "";
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            top: -10%;
-            right: 5%;
-            background: var(--secondary-color);
-            opacity: .5;
-            border-radius: 50%;
-            transition: .3s linear;
-        }
-        .headBox{
-            height: 100%;
-            border-radius: 10px;
-
-        }
-        .landing-home{
-            position: absolute;
-            z-index: 9999 important;
-            width: 100%;
-            height: 100%;
-        }
-        .header-bar{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            margin-top: 1rem;
-        }
-        .logo{
-            color: var(--third-color);
-            font-size: 50px;
-            font-weight: bold;
-        }
-        nav{
-            display: flex;
-            border: 1px solid var(--secondary-color);
-            background: var(--secondary-color);
-            padding: 0 2rem;
-            border-radius: 10px;
-        }
-        nav a{
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin: 1rem;
-            cursor: pointer;
-            transition: .3s;
-        }
-        nav a li{
-            list-style: none;
-            position: relative;
-            padding-bottom: 5px;
-            transition: .3s;
-            letter-spacing: 2px;
-        }
-        nav a li::before{
-            /* content: ""; */
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 10%;
-            /* border-bottom: 2px solid transparent; */
-            transition: .3s;
-        }
-        nav a li:hover::before{
-            width: 100%;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-           
-
-    </style>
-</head>
-<body>
-    <header>
-        <div class="headBox">
-          <div class="landing-home">
-            <div class="header-bar">
-              <div class="logo">
-                <span class="second-color">OwnResume Builder</span>
-              </div>
-              <nav>
-                <a href="../html/Home.html" target="_blank"><li>Home</li></a>
-                <a href="../html/about.html" target="_blank"><li>About Us</li></a>
-                <a href="../html/project.html" target="_blank"><li>Resume</li></a>
-                <a href="../html/userstory.html" target="_blank"><li>Letter</li></a>
-                <a href="../html/contact.html" target="_blank"><li>ContactUs</li></a>
-                <a href="./Html/Login.html"><li>Login</li></a>
-                <a href="./Html/signup.html"><li>Signup</li></a>
-              </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OwnResume Builder</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+        <link href="../CSS/resumestyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <div class="identity">
+                <h1><a href="#">OwnResume Builder</a></h1>
             </div>
-           
+            <nav class="navigation">
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="signup.html">Resume tips</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
-      
-      <div class="conte"></div>
-  
-</body>
+            
+        <header class="page-header gradient" id="pageHeader">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <p style="color: #0a0000; font-weight: bold;">Create Your Professional Resume With Resume Builder
+                        </p>
+                        <button type="button" class="btn btn-primary"><a href="Form.html"
+                                style="text-decoration:none; color:white;"><i
+                                    class="bi bi-file-earmark-person-fill mr-4"></i>Create Your Resume</a></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container" id="container-template">
+            <h1>Make a resume that stands out</h1>
+            <p>Increase your chances of getting a job by creating your resume with our well designed resume
+                templates.</p>
+            <div class="row" style="width:90%; margin:auto;">
+                <div class="col-md-4">
+                    <img src="../Images/T1.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <img src="../Images/T2.PNG" style="width:510px; height:620px;" class="img-thumbnail"
+                        style="width:520px;height:620px;" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <img src="../Images/T3.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+                </div>
+            </div>
+        </div>
+       
+                
+    </body>
 </html>
