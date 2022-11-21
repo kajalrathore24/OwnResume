@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/resumegenerator.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>resume generator</title>
+</head>
+<body>
+    <div class="container" id="resume-form">
+        <h1 class="text-center my-2">Resume generator</h1>
+        <p class="text-center">Own Resume Builder</p>
+        <div class="row">
+            <div class="col-md-6">
+                    <h3>Personal Information</h3>
+
+                    <div class="form-group">
+                        <label for="namefield">Your Name</label>
+                        <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="contactfield">Your Contact</label>
+                        <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="addressfield">Your address</label>
+                        <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="">Select your picture</label>
+                        <input type="file" id="imgField" class="form-control">
+                    </div>
+
+                    <p class="text-secondary my-3">Important links</p>
+                    <div class="form-group mt-2">
+                        <label for="gh">Github</label>
+                        <input type="text" id="ghField" placeholder="Enter here" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="lcfield">Leetcode</label>
+                        <input type="text" id="lcField" placeholder="Enter here" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="lifield">Linkedin</label>
+                        <input type="text" id="liField" placeholder="Enter here" class="form-control">
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="oField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+
+                    <!-- new textarea -->
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <script>
+                        function addNewWEField(){
+                            // console.log("Adding new field");
+                            let newNode=document.createElement('textarea');
+                            newNode.classList.add('form-control');
+                            newNode.classList.add('weField');
+                            newNode.classList.add('mt-2');
+                            newNode.setAttribute("rows",3);
+
+                            
+                            let weOb=document.getElementById("we");
+                            let weAddButtonOb=document.getElementById("weAddButton");
+
+                            weOb.insertBefore(newNode,weAddButtonOb);
+
+                        }
+                    </script>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualification</label>
+                    <textarea placeholder="Enter here" class="form-control aqField rows=3"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                    <script>
+                        function addNewAQField(){
+                            // console.log("Adding new field");
+                            let newNode=document.createElement('textarea');
+                            newNode.classList.add('form-control');
+                            newNode.classList.add('aqField');
+                            newNode.classList.add('mt-2');
+                            newNode.setAttribute("rows",3);
+
+                            
+                            let aqOb=document.getElementById("aq");
+                            let aqAddButtonOb=document.getElementById("aqAddButton");
+
+                            aqOb.insertBefore(newNode,aqAddButtonOb);
+
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
+        </div>
+
+        <!-- Generate Resume -->
+        <script>
+            function generateResume(){
+                // console.log("generating resume");
+                let nameField=document.getElementById("nameField").value;
+                let nameT1=document.getElementById("nameT1");
+                nameT1.innerHTML=nameField;
+
+                // direct
+                document.getElementById("nameT2").innerHTML=nameField;
+
+                //contact
+                document.getElementById("contactT").innerHTML=document.getElementById("contactField").value;
+
+                //address
+                document.getElementById("addressT").innerHTML=document.getElementById("addressField").value;
+
+                //facebook
+                document.getElementById("ghT").innerHTML=document.getElementById("ghField").value;
+
+                // insta
+                document.getElementById("lcT").innerHTML=document.getElementById("lcField").value;
+
+                //linkedin
+                document.getElementById("liT").innerHTML=document.getElementById("liField").value;
+
+                //objective
+                document.getElementById("objectiveT").innerHTML=document.getElementById("oField").value;
+
+                //work experience
+                let wes=document.getElementsByClassName("weField");
+                let str='';
+                for(let e of wes){
+                    str=str+`<li>${e.value}</li>`;
+                }
+                document.getElementById('weT').innerHTML=str;
+
+                //academic Qualification
+                let aqs=document.getElementsByClassName("aqField");
+                let str1='';
+                for(let e of aqs){
+                    str1=str1+`<li>${e.value}</li>`;
+                }
+                document.getElementById('aqT').innerHTML=str1;
+
+                //code for setting image
+                // console.log(file)
+                let file=document.getElementById('imgField').files[0];
+                let reader=new FileReader();
+                reader.readAsDataURL(file);
+                // console.log(reader.result);
+                // set the image to template
+                
+                //set the image to template
+                reader.onloadend=function(){
+                    document.getElementById('imgTemplate').src=reader.result;
+                }
+
+                document.getElementById('resume-form').style.display='none';
+                document.getElementById('resume-template').style.display='block';
+
+            }
+        </script>
+        
+    </div>
+
+
+    <!-- Resume template -->
+
+    <div class="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- First col -->
+                <i href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png" 
+                alt="" class="img-fluid myimg" id="imgTemplate" /></i>
+
+                <div class="container">
+                    <p id="nameT1">Kajal Rathore</p>
+                    <p id="contactT">+918923357827</p>
+                    <p id="addressT">Arya Nagar,kosi kalan,Mathura</p>
+                    <hr />
+
+                    <p><a id="ghT" href="#1">https://github.com/kajalrathore24</a></p>
+                    <p><a id="lcT" href="#1">https://leetcode.com/kajalrathore/</a></p>
+                    <p><a id="liT" href="#1">https://www.linkedin.com/kajalrathore</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 text-center">
+                <!-- second col -->
+                <h1 id="nameT2">Kajal Rathore</h1>
+
+                <!-- Objective card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+
+                    </div>
+                    <div class="card-body">
+                            <p id="objectiveT">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ex magni aliquam sint eum quod ipsa quas ut 
+                                quaerat reiciendis. Aut, similique? Accusamus quam voluptatibus eum amet velit consectetur? Unde rerum culpa 
+                                vitae quis ducimus ab non perspiciatis praesentium, autem eum in laudantium nisi, 
+                                ratione accusamus dolor necessitatibus alias architecto.
+                            </p>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printResume()"class="btn background">print Resume</button>
+                </div>
+                <script>
+                    function printResume(){
+                        window.print();
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

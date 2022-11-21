@@ -1,21 +1,14 @@
 <!DOCTYPE htaml>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>OwnResume Builder</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-        <link href="./css/index.css" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OwnResume Builder</title>
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+</head>
+<body>
         <div class="header">
             <div class="identity">
                 <h1><a href="#">OwnResume Builder</a></h1>
@@ -34,33 +27,100 @@
             <div class="container">
                 <div class="row">
                     <div>
-                        <p style="color: #0a0000; font-weight: bold;">Create Your Professional Resume With Resume Builder
+                        <p style="color: #ffffff; font-weight: bold;">Create Your Professional Resume With Resume Builder
                         </p>
-                        <button type="button" class="btn btn-primary"><a href="Form.html"
-                                style="text-decoration:none; color:white;"><i
+                        <button type="button" class="btn btn-primary"><a href="./html/resumegenerator.html"
+                                style="text-decoration:none; color:white;margin-top:200px;background-color:  black;"><i
                                     class="bi bi-file-earmark-person-fill mr-4"></i>Create Your Resume</a></button>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="container" id="container-template">
+        <div class="container-fluid templates" id="templates">
             <h1>Make a resume that stands out</h1>
             <p>Increase your chances of getting a job by creating your resume with our well designed resume
                 templates.</p>
-            <div class="row" style="width:90%; margin:auto;">
+            <div class="row" style="width:90%; margin:auto; display:flex;margin:20px;">
                 <div class="col-md-4">
-                    <img src="./images/T1.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+                    <img src="./images/T1.PNG style="width:410px; height:620px;margin:10px" class="img-template" alt="...">
                 </div>
                 <div class="col-md-4">
-                    <img src="./images/T2.PNG" style="width:510px; height:620px;" class="img-thumbnail"
-                        style="width:520px;height:620px;" alt="...">
+                    <img src="./images/T2.PNG" style="width:410px; height:620px;margin:10px" class="img-template" alt="...">
                 </div>
                 <div class="col-md-4">
-                    <img src="./images/T3.PNG" style="width:510px; height:620px;" class="img-thumbnail" alt="...">
+                    <img src="./images/T3.PNG" style="width:410px; height:620px;margin:10px" class="img-template" alt="...">
                 </div>
             </div>
         </div>
-       
+
+
+        <!-- Features -->
+        <div class="container features">
+            <h1>Features</h1>
+            <div class="row">
+                <div class="card" style="max-width: 100%; justify-content:center;">
+                    <div class="row g-0" style=" display:flex; margin:20px">
+                        <div class="col-md-4">
+                            <img src="./images/R1.png" class="img-fluid mt-4 ml-4" style="height:200px; width:200px;">
+                        </div>
+                        <div class="col-md-8" style="margin:20px;">
+                            <div class="card-body">
+                                <h2 class="card-title">Quick and easy resume builder</h2>
+                                <p class="card-text" style="padding-top:2.5rem;">With our online Resume maker, it is simple for
+                                    anyone to quickly create a professional Resume. Enter your personal details and begin
+                                    filling out your Resume content. Finally, choose our available Resume layouts, and
+                                    print your Resume.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card" style="max-width: 100%; justify-content:center;">
+                    <div class="row g-0" style=" display:flex; margin:20px">
+                        <div class="col-md-4">
+                            <img src="./images/R2.png" class="img-fluid mt-3 ml-4" style="height:200px; width:200px;">
+                        </div>
+                        <div class="col-md-8" style="margin:20px">
+                            <div class="card-body">
+                                <h2 class="card-title">More likely to land a job</h2>
+                                <p class="card-text" style="padding-top:2.5rem;">With a representative and professional Resume,
+                                    you will stand out amongst all other applicants. You are also up to 65% more likely to
+                                    be invited to an interview.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card" style="max-width: 100%;justify-content:center">
+                    <div class="row g-0" style="display:flex;margin:20px">
+                        <div class="col-md-4">
+                            <img src="./images/R3.png" class="img-fluid mt-3 ml-4"
+                                style="width:200px;height:200px;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Oragnize your applications</h2>
+                                <p class="card-text">Often, it is important to be able to tailor your Resume based on the job
+                                    you wish to apply for. With Resume maker, you can create and manage several different Resumes in
+                                    an organised way through your own personal account hub.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <footer class="page-footer">
+            <!-- <div class="footer-copyright text-center py-3">© 2022 Copyright
+                 <a href="...">Resume_Builder</a> 
+
+            </div> -->
+        </footer>
                 
     </body>
 </html>

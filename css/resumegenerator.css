@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(45deg, #1abc9c, #149279);
+}
+/* #resume-form{ 
+    display: none;
+} */
+#resume-template{
+    display: none;
+}
+.myimg{
+    bottom: 1pc solid red;
+    border-radius: 50%;
+    width:500px;
+}
+.background{
+    background-color: aqua;
+}
