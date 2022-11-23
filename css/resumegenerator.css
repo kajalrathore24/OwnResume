@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(45deg, #1abc9c, #149279);
+    background: linear-gradient(45deg, #CFE5FA, #518DD1);
 }
 /* #resume-form{ 
     display: none;
@@ -13,5 +13,5 @@ body{
     width:500px;
 }
 .background{
-    background-color: aqua;
+    background: linear-gradient(45deg, #CFE5FA, #518DD1);
 }

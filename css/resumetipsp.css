@@ -3,14 +3,16 @@ body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
   font-style: bold;
-  background: linear-gradient(45deg, #1abc9c, #149279);
+  background:linear-gradient(45deg, #CFE5FA, #518DD1);
 }
 a {
   text-decoration: none;
   color: #000;
 }
 a:hover {
-  color: rgb(179, 179, 179);
+  /* color: rgb(179, 179, 179); */
+  color:linear-gradient(45deg, #CFE5FA, #518DD1);
+  background:linear-gradient(45deg, #CFE5FA, #518DD1);
 }
 .header {
     border-bottom: 1px solid #ccc;
@@ -18,16 +20,13 @@ a:hover {
     display: flex;
     justify-content: space-between;
     color:black;
+    color:linear-gradient(45deg, #CFE5FA, #518DD1);
+    background:linear-gradient(45deg, #CFE5FA, #518DD1);
 }
 .identity h1 {
     font-size: 1.5em;
     margin: 0.6em 0;
     display: inline-block;
-}
-.navigation ul,
-.navigation li {
-    margin: 0;
-    padding: 0;
 }
 .navigation li {
     display: inline-block;
@@ -37,6 +36,7 @@ a:hover {
   padding: 5rem;
   text-align: center;
   background-color: rgb(240, 240, 240);
+  margin:0px;
 }
 nav li a:hover {
   background-color: rgb(240, 240, 240);
@@ -46,7 +46,7 @@ li {
   padding-left: 2.5rem;
 }
 #header h1 {
-  margin-top: 2.5rem;
+  margin-top: 0px;
 }
 #Card {
   margin: 2.5rem 5rem 2.5rem 5rem;
