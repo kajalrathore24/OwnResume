@@ -1,89 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="../css/contactus.css" />
-    <script src="https://kit.fontawesome.com/006a13d438.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="form">
-        <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
-            sometimes, you need a little help from your friends or a HubSpot
-             support rep. Don't Worry.....we're here for you
-          </p>
-
-          <div class="info">
-            <div class="information">
-              <i class="fa-solid fa-location-dot"></i>
-              <p class="social-media">
-                <pre>   3584,Sarrafa Bazar<br>   KosiKalan(Mathura),281403 </pre>
-            </div>
-            <div class="information">
-              <i class="fa-solid fa-envelope"></i>
-              <p class="social-media">
-                <code>
-              <p> &nbsp jain.anjali0605@gmail.com</p>
-              </code>
-            </div>
-            <div class="information">
-              <i class="fa-solid fa-phone"></i>
-              <p class="social-media">
-                <code>
-              <p> &nbsp 7906487920</p>
-              </code>
-            </div>
-          </div>
-
-          <div class="social-media">
-            <p>Connect with us :</p>
-            <div class="social-icons">                                
-                                  
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-
-              <a href="https://github.com/Anjalijain-02?tab=repositories">
-                <i class="fa-brands fa-github"></i>
-              </a>
-
-              <a href="https://www.linkedin.com/in/anjali-jain-7673a3227">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form">
-
-          <form action="../css/contactus.css" autocomplete="off">
-            <h3 class="title">Contact us</h3>
-            <div class="input-container">
-              <input id="name" type="text" placeholder="Username" name="name" class="input" />
-              
-            </div>
-            <div class="input-container">
-              <input id="email" type="email" placeholder="Email adddress" name="email" class="input" />
-             
-            </div>
-            <div class="input-container">
-              <input id="phone" type="tel"placeholder="Phone number" name="phone" class="input" />
-              
-            </div>
-            <div class="input-container textarea">
-              <input id="message" name="message" placeholder="message" class="input"></input>
-            </div>
-            <button type="submit" class="btn"> Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-<script src="../firebase.js" type="module"> </script>
-<script src="../script.js" type="module"></script>
+    <link rel="stylesheet" href="../css/contactus.css">
+</head>
+<body>
     
-  </body>
+    <div class="content">
+        <div id="details">
+            <h2>connect with us</h2>
+            <address>kosi kalan<br/>Near gopal g complex,kosi kalan(mathura)</address><br><br><br>
+            <b>Contact Number:+917906487920</b><br/><br/>
+            <b>Email:anjali.jain_cs20@gla.ac.in</b><br><br>
+            <b>Social Accounts-</b>
+            <br><br>
+            Linkedln:-<a href="https://www.linkedin.com/in/anjali-jain-7673a3227">Click here</a>
+            <br><br>
+            Github:-<a href="https://github.com/Anjalijain-02?tab=repositories">click here</a><br><br>
+            <p>Write a message for us in the contact form-</p>
+    
+        </div>
+              
+        <div class="container">
+            <h2>Send Message</h2>
+            <hr>
+            <div class="form">
+                <form>
+                    Id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="idBox"><br><br>
+                    Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="nameBox"><br><br>
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="emailBox"><br><br>
+                    Message:&nbsp;<textarea id="textBox"  rows="4" cols="50"></textarea>
+                    <div class="btns">
+                        <div class="btn">Insert</div>
+                        <div class="btn">Read</div>
+                        <div class="btn">Update</div>
+                        <div class="btn"><a href="#">Delete</a></div>
+                    </div>
+                </form>
+            </div>
+        
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js" type="module"></script>
+   <script src="../script.js" tyep="module"></script>
+   <script src="../firebase.js" type="module"></script>
+ 
+     
+</body>
 </html>
