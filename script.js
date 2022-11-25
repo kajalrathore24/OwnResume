@@ -1,14 +1,14 @@
-// import {
-//     getDatabase,
-//     ref,
-//     get,
-//     set,
-//     update,
-//     remove,
-//     child
-//    } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-//   var IdV,nameV,emailV,textV;
-//   const db = getDatabase();
+import {
+    getDatabase,
+    ref,
+    get,
+    set,
+    update,
+    remove,
+    child
+   } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  var IdV,nameV,emailV,textV;
+  const db = getDatabase();
   
   // Reference
   // Getting data from Textboxes
